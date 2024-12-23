@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commander nos Fleurs</title>
+    <style>
+        /* Style global */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #F8F8FF; /* Fond blanc */
+            color: #FF1493; /* Texte rose */
+            height: 100%; /* Utilise toute la hauteur de la fenêtre */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Permet de ne pas centrer tout le contenu */
+            padding: 20px;
+            overflow-y: auto; /* Permet de faire défiler la page si le contenu dépasse */
+        }
+
+        header {
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.8); /* Fond légèrement transparent pour contraste */
+            width: 100%;
+            max-width: 600px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            align-self: center;
+        }
+
+        header h1 {
+            font-size: 4.5em;
+            color: #FF1493; /* Rose */
+            font-weight: bold;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Ombre pour améliorer la lisibilité */
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .welcome-text {
+            font-size: 1.5em;
+            margin: 20px 0;
+            font-weight: 300;
+        }
+
+        /* Container pour le logo */
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px 0;
+        }
+
+        .logo-container img {
+            width: 300px; /* Taille du logo */
+        }
+
+        /* Container pour les images des bouquets */
+        .bouquet-images {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .bouquet-images img {
+            width: 300px; /* Ajuste la taille de chaque image */
+            border-radius: 10px; /* Arrondi des images */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Container pour le bouton */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .button {
+            background-color: #FF1493; /* Rose */
+            color: white;
+            padding: 20px 50px;
+            font-size: 1.5em;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s, transform 0.2s;
+            width: 220px;
+            text-transform: uppercase;
+        }
+
+        .button:hover {
+            background-color: #FF69B4; /* Rose légèrement plus clair */
+            transform: scale(1.05);
+        }
+
+        .button:active {
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bienvenue sur notre site Beauty Flowers</h1>
+        <!-- Photo entre le texte d'intro et les bouquets -->
+        <div class="logo-container">
+            <img src="Fleurs/fleurs5.jpg" alt="Fleurs 5">
+        </div>
+        <p class="welcome-text">Voici quelques-uns de nos bouquets :</p>
+    </header>
+
+    <!-- Image des bouquets -->
+    <div class="bouquet-images">
+        <img src="Fleurs/fleurs1.jpg" alt="Fleurs 1">
+        <img src="Fleurs/fleurs2.jpg" alt="Fleurs 2">
+        <img src="Fleurs/fleurs3.jpg" alt="Fleurs 3">
+        <img src="Fleurs/fleurs4.jpg" alt="Fleurs 4">
+    </div>
+
+    <!-- Bouton pour commander -->
+    <div class="button-container">
+        <a href="commande.html">
+            <button class="button">Voir nos offres</button>
+        </a>
+    </div>
+
+</body>
+</html>

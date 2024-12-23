@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commander nos Fleurs</title>
+    <style>
+        /* Style global */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff; /* Fond blanc */
+            color: #333;
+            height: 100%; /* Utilise toute la hauteur de la fenêtre */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Permet de ne pas centrer tout le contenu */
+            padding: 20px;
+            overflow-y: auto; /* Permet de faire défiler la page si le contenu dépasse */
+        }
+
+        header {
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1); /* Fond légèrement transparent pour contraste */
+            width: 100%;
+            max-width: 600px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            align-self: center;
+        }
+
+        header h1 {
+            font-size: 4.5em;
+            color: #FF69B4; /* Rose vif */
+            font-weight: bold;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Ombre plus forte pour améliorer la lisibilité */
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .welcome-text {
+            font-size: 1.5em;
+            margin: 20px 0;
+            font-weight: 300;
+            color: #FF69B4; /* Rose vif */
+        }
+
+        /* Sélection des produits */
+        .product-selection, .bouquet-selection, .decoration-selection {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.2); /* Fond avec un peu d'opacité pour contraste */
+            border-radius: 10px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 600px;
+            align-self: center;
+        }
+
+        .product-selection label, .bouquet-selection label, .decoration-selection label {
+            font-size: 1.4em;
+            color: #FF69B4; /* Rose vif */
+            font-weight: 600;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-selection select, .bouquet-selection select, .decoration-selection select {
+            font-size: 1.2em;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 10px;
+            border: 2px solid #FF69B4; /* Rose vif */
+            background-color: #fff;
+            color: #333;
+            width: 100%;
+            max-width: 350px;
+        }
+
+        /* Bouton pour finaliser la commande centré */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .button {
+            background-color: #FF69B4; /* Rose vif */
+            color: white;
+            padding: 20px 50px;
+            font-size: 1.5em;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s, transform 0.2s;
+            width: 220px;
+            text-transform: uppercase;
+        }
+
+        .button:hover {
+            background-color: #FF1493; /* Rose encore plus foncé */
+            transform: scale(1.05);
+        }
+
+        .button:active {
+            transform: scale(1);
+        }
+
+        /* Texte pour la réduction */
+        .offer {
+            font-size: 1.2em;
+            color: #FF69B4; /* Rose vif */
+            margin-top: 20px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Choisir nos Fleurs</h1>
+        <p class="welcome-text">Voir nos offres de fleurs et options ci-dessous :</p>
+    </header>
+
+    <!-- Sélection des produits -->
+    <div class="product-selection">
+        <label for="flyer">Voir votre produit :</label>
+        <select id="flyer" name="flyer">
+            <option value="rose">1 Rose - 2.50 €</option>
+            <option value="bouquet_moyen">Bouquet Moyen - 18 €</option>
+            <option value="bouquet_grand">Bouquet Assez Grand - 25 €</option>
+            <option value="bouquet_tres_grand">Bouquet Grand - 35 €</option>
+        </select>
+    </div>
+
+    <!-- Sélection des possibilités de bouquets (Satin, Voile, Boîte) -->
+    <div class="bouquet-selection">
+        <label for="possibilite">Voir votre possibilité :</label>
+        <select id="possibilite" name="possibilite">
+            <option value="aucune">Aucune option</option>
+            <option value="satin">Bouquet en satin</option>
+            <option value="voile">Bouquet en voile</option>
+            <option value="boite_fleur">Boîte fleurale décorative</option>
+        </select>
+    </div>
+
+    <!-- Sélection des décorations -->
+    <div class="decoration-selection">
+        <label for="decoration">Voir une décoration :</label>
+        <select id="decoration" name="decoration">
+            <option value="aucune">Aucune décoration</option>
+            <option value="couronne">Couronne - 5 €</option>
+            <option value="lettre">Lettre - 5 €</option>
+            <option value="papillon">Papillon - Gratuit</option>
+            <option value="peluche">Peluche - 8 €</option>
+        </select>
+    </div>
+
+    <!-- Offres spéciales -->
+    <div class="offer">
+        <p>Obtenez 5 € de réduction sur votre deuxième achat !</p>
+    </div>
+
+    <!-- Container pour centrer le bouton -->
+    <div class="button-container">
+        <a href="confirmation.html">
+            <button class="button">Commandée</button>
+        </a>
+    </div>
+
+</body>
+</html>
